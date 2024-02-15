@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhadala</title>
+    <!-- Include Tailwind CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <!-- Include Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Include Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/fceb99dda2.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Additional styles -->
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/globalResponsive.css" />
+    <link rel="stylesheet" href="../css/pay.css" />
+</head>
+<body>
+    <div class="book_navigation_section pb-11">
+        <div class="mx-auto lg:px-16 px-4">
+          <!-- Navigation -->
+          <nav class="pt-4">
+            <div class="flex items-center justify-between flex-wrap">
+              <div class="logo">
+                <img src="../assets/Logo.png" alt="" srcset="" />
+              </div>
+              <div class="hidden md:block">
+                <ul class="desktop_menu flex items-center">
+                  <li><a href="#">BUY TICKETS</a></li>
+                  <li><a href="#">FARES</a></li>
+                  <li><a href="#">SCHEDULE</a></li>
+                  <li>
+                    <button><i class="fas fa-user mr-2"></i> Sign In</button>
+                  </li>
+                </ul>
+              </div>
+              <!-- Mobile Menu -->
+              <div class="block md:hidden">
+                <div class="offcanvas-menu" id="offcanvasMenu">
+                  <span class="close-icon" onclick="toggleMenu()">&times;</span>
+                  <a href="#" class="menu-link">Home</a>
+                  <a href="#" class="menu-link">About</a>
+                  <a href="#" class="menu-link">Services</a>
+                  <a href="#" class="menu-link">Contact</a>
+                </div>
+                <div class="menu-toggle" id="menuToggle" onclick="toggleMenu()">
+                  &#9776;
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+        <!-- Navigation end -->
+        <di class="border-t border-gray-500 w-full block mt-5"></di>
+        <!-- **************stepper************** -->
+        <div class="mx-auto lg:px-16 px-4">
+          <div class="flex items-center justify-center mt-10 ">
+            <!-- ------1--- -->
+            <div class="flex items-center">
+              <div
+                class="bg-[#4F9747] text-white rounded-full sm:w-9 sm:h-9 w-6 h-6 flex items-center justify-center font-semibold text-lg"
+              >
+              <i class="fas fa-check"></i>
+              </div>
+              <p class="sm:text-base text-xs text-white font-semibold sm:mx-4 mx-1">BOOK</p>
+              <div
+                class="bg-gradient-to-r from-slate-400 from-10% via-slate-200 via-30% to-slate-400 to-90% w-10 h-px"
+              ></div>
+            </div>
+            <!-- ------2--- -->
+            <div class="flex items-center sm:mx-5 mx-2">
+              <div
+                class="bg-[#4F9747] text-white rounded-full sm:w-9 sm:h-9 w-6 h-6 flex items-center justify-center font-semibold text-lg"
+              >
+              <i class="fas fa-check"></i>
+              </div>
+              <p class="sm:text-base text-xs  text-white font-semibold sm:mx-4 mx-1">INFO</p>
+              <div
+                class="bg-gradient-to-r from-slate-400 from-10% via-slate-200 via-30% to-slate-400 to-90% w-10 h-px"
+              ></div>
+            </div>
+            <!-- ------3--- -->
+            <div class="flex items-center">
+              <div
+                class="bg-[#F8A930] text-white rounded-full sm:w-9 sm:h-9 w-6 h-6 flex items-center justify-center font-semibold text-lg"
+              >
+                3
+              </div>
+              <p class="sm:text-base text-xs  text-white font-semibold sm:mx-4 mx-1">PAY</p>
+              <div
+                class="bg-gradient-to-r from-slate-400 from-10% via-slate-200 via-30% to-slate-400 to-90% w-10 h-px"
+              ></div>
+            </div>
+            <!-- ------4--- -->
+            <div class="flex items-center sm:ml-5 ml-2">
+              <div
+                class="bg-[#F5F5F5] text-[#09355E] rounded-full sm:w-9 sm:h-9 w-6 h-6 flex items-center justify-center font-semibold text-lg"
+              >
+                4
+              </div>
+              <p class="sm:text-base text-xs  text-white font-semibold sm:mx-4 mx-1">CONFIRM</p>
+            </div>
+          </div>
+          <!-- ******stepper*** -->
+        </div>
+      </div>
+      <!-- Hero Content end -->
+      <!-- ******************pay_section*********** -->
+      <section class="bg-white">
+            <div class="lg:px-14 px-4">
+                <div class="grid grid-cols-2 gap-5">
+                    <!-- ----payment-method--- -->
+                    <div>
+                        
+                    </div>
+                    <!-- ----info-ticket-summary--- -->
+                    <div>
+
+                    </div>
+                </div>
+            </div>
+      </section>
+</body>
+</html>

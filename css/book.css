@@ -1,0 +1,44 @@
+.booking_content_area{
+    display: grid;
+    grid-template-columns: repeat(2,60% 40%);
+}
+.search_card{
+    background-color: white;
+    padding: 10px 0;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.485);
+    border-radius: 10px;
+}
+
+.search_card_result{
+    height: 548px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    padding-right: 12px;
+    padding-bottom: 10px;
+}
+.search_card_result::-webkit-scrollbar {
+    width: 5px;
+   
+  }
+  
+  /* Track */
+  .search_card_result::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  .search_card_result::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  .search_card_result::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+
+  .booking_right_area{
+    background-color: white;
+    height: 835px;
+  }
+
+  

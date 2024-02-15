@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bhadala</title>
+       <!-- Include Tailwind CSS -->
+       <link
+       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+       rel="stylesheet"
+     />
+    <!-- Include Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Include Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/fceb99dda2.js"
+      crossorigin="anonymous"
+    ></script>
+ 
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Additional styles -->
+    <link rel="stylesheet" href="../css/index.css" />
+    <link rel="stylesheet" href="../css/indexResponsive.css" />
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/globalResponsive.css" />
+  </head>
+  <body>
+    <div class="hero_section">
+      <div class=" mx-auto lg:px-20  px-4">
+        <!-- Navigation -->
+        <nav class="pt-5">
+          <div class="flex items-center justify-between flex-wrap">
+            <div class="logo">
+              <img src="../assets/Logo.png" alt="" srcset="" />
+            </div>
+            <div class="hidden md:block">
+              <ul class="desktop_menu flex items-center">
+                <li><a href="#">BUY TICKETS</a></li>
+                <li><a href="#">FARES</a></li>
+                <li><a href="#">SCHEDULE</a></li>
+                <li>
+                  <button><i class="fas fa-user mr-2"></i> Sign In</button>
+                </li>
+              </ul>
+            </div>
+            <!-- Mobile Menu -->
+            <div class="block md:hidden">
+              <div class="offcanvas-menu" id="offcanvasMenu">
+                <span class="close-icon" onclick="toggleMenu()">&times;</span>
+                <a href="#" class="menu-link">Home</a>
+                <a href="#" class="menu-link">About</a>
+                <a href="#" class="menu-link">Services</a>
+                <a href="#" class="menu-link">Contact</a>
+              </div>
+              <div class="menu-toggle" id="menuToggle" onclick="toggleMenu()">
+                &#9776;
+              </div>
+            </div>
+          </div>
+        </nav>
+        <!-- Navigation end -->
+        <!-- Hero Content -->
+        <div class="hero_content">
+          <h1>DETROIT AIRPORT EXPRESS</h1>
+          <p>
+            Book Detroit Airport Express shuttles fast. Seamless online ticket
+            purchases to the airport and downtown on time. Book now and embark
+            confidently!
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- Hero Content end -->
+    <!-- Booking Area start-->
+    <div class="booking_area md:block hidden">
+      <div class=" mx-auto lg:px-20  px-4 w-full">
+        <div class="booking_top mx-20 flex items-center justify-between ">
+          <div class="flex items-center border-r-2 py-6 xl:w-2/5 md:w-3/6 w-3/5">
+            <div>
+              <input type="radio" id="oneWay" name="tripType" class="mr-2" />
+              <label for="oneWay" class="mr-8">One-Way</label>
+            </div>
+            <div class="ml-5">
+              <input type="radio" id="roundTrip" name="tripType" class="mr-2" />
+              <label for="roundTrip">Round Trip</label>
+            </div>
+          </div>
+          <div class="flex justify-between items-center w-3/5">
+            <div class="flex ml-8">
+              <img class="mr-4" src="../assets/uil_user.png" alt="" />
+              <p>Passengers</p>
+            </div>
+            <div class="relative inline-block text-left">
+              <div>
+                <button
+                  id="options-menu"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  onclick="toggleDropdown()"
+                >
+                  <i class="fas fa-chevron-down"></i>
+                </button>
+              </div>
+              <div
+                class="origin-top-right absolute  mt-2 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 hidden "
+                role="menu"
+                aria-orientation="vertical"
+                aria-labelledby="options-menu"
+                tabindex="-1"
+                id="dropdownContent" style="width: 580px;right: -50px;"
+              >
+                <div class="p-4 " role="none">
+                 <div>
+                  <!-- ---------------- -->
+                  <div class="flex justify-between">
+                    <div><p class="text-[#09355E] text-base">Adult (Age 12 and over)</p></div>
+                    <div class="flex items-center">
+                      <i class="fas fa-minus-square text-[#EDEDED] text-xl" ></i>
+                      <p class="text-[#09355E] font-bold text-base mx-5">1</p>
+                      <i class="fas fa-plus-square text-[#F8A930] text-xl"></i>
+                      <div class="flex items-center bg-[#EDEDED] px-2.5 py-2 rounded-lg ml-5">
+                        <img src="../assets/bookig-filter-Vector.png" alt="" srcset="" class="w-3.5  mr-5 ">
+                        <img src="../assets//bookig-check-Vector.png" alt="" srcset="" class="w-3.5">
+                      </div>
+                    </div>
+                 </div>
+                  <!-- ---------------- -->
+                  <div class="flex justify-between my-5 ">
+                    <div><p class="text-[#09355E] text-base">Adult (Age 12 and over)</p></div>
+                    <div class="flex items-center">
+                      <i class="fas fa-minus-square text-[#F8A930] text-xl" ></i>
+                      <p class="text-[#09355E] font-bold text-base mx-5">2</p>
+                      <i class="fas fa-plus-square text-[#F8A930] text-xl"></i>
+                      <div class="flex items-center bg-[#EDEDED] px-2.5 py-2 rounded-lg ml-5">
+                        <img src="../assets/bookig-filter-Vector.png" alt="" srcset="" class="w-3.5  mr-5 ">
+                        <img src="../assets//bookig-check-Vector.png" alt="" srcset="" class="w-3.5">
+                      </div>
+                    </div>
+                 </div>
+                 <div class="flex border-t justify-between pt-4">
+                  <p class="text-[#09355E]">Filter Search By :</p>
+                  <div class="flex items-center ">
+                    <img src="../assets/bookig-filter-Vector.png" alt="" srcset="" class="w-4 ">
+                    <p class="mx-4 text-[#09355E]">Wheelchair Life Needed</p>
+                    <img src="../assets//bookig-check-Vector.png" alt="" srcset="" class="w-4">
+                  </div>
+                 </div>
+                 </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ---booking_search--- -->
+      <div class="booking_search">
+        <div class=" mx-auto lg:px-20  px-4 w-full">
+          <div class="booking_bottom flex items-center flex justify-between">
+            <div class="border-r-2 py-12  w-1/6 flex">
+              <div class="flex items-center px-5">
+                <img src="../assets/bus depart.png" alt="" />
+              <input
+                type="text"
+                name=""
+                id=""
+                placeholder="From"
+                class="focus:outline-none ml-2 w-full"
+              />
+              </div>
+              <img style="margin-right: -11px;" src="../assets/booking-circle.png" alt="">
+            </div>
+            <div class="flex items-center border-r-2 py-12 px-5 w-1/6">
+              <img
+                style="width: 28px; height: 36px"
+                src="../assets/bus arrive.png"
+                alt=""
+              />
+              <input
+                type="text"
+                name=""
+                id=""
+                placeholder="To"
+                class="focus:outline-none ml-2 w-full"
+              />
+            </div>
+            <div class="flex items-center border-r-2 py-12 px-5 w-1/6">
+              <img src="../assets/clarity_calendar-line.png" alt="Arrive" />
+              <input
+                type="text"
+                id="departure-date"
+                placeholder="Departure Date"
+                class="focus:outline-none ml-2 w-full"
+              />
+            </div>
+            <div class="flex items-center pl-5 w-1/4">
+              <img src="../assets/clarity_calendar-line.png" alt="Arrive" />
+              <input
+                type="text"
+                id="departure-date"
+                placeholder="Return Date w-full"
+                class="focus:outline-none ml-2"
+              />
+            </div>
+            <div
+              class="py-12 px-6 text-center"
+              style="background-color: #f8a930"
+            >
+              <i class="fas fa-search-location"></i>
+              <p>Search</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- **********Booking_mobile*********** -->
+    <div class="mx-auto lg:px-20  px-4 md:hidden block">
+        <div class="mobile_booking ">
+          <div class="flex items-center ">
+            <div>
+              <input type="radio" id="oneWay" name="tripType" class="mr-2" />
+              <label for="oneWay" class="mr-8">One-Way</label>
+            </div>
+            <div class="ml-5">
+              <input type="radio" id="roundTrip" name="tripType" class="mr-2" />
+              <label for="roundTrip">Round Trip</label>
+            </div>
+          </div>
+          <!-- ---------form--------- -->
+         <div class="flex items-center justify-between mt-4">
+          <div class="w-2/5">
+            <label for="From">From</label>
+            <div class="flex items-center p-3 border rounded-lg ">
+              <img src="../assets/bus depart.png" alt="" />
+            <input type="text"
+              class="focus:outline-none w-2/5"
+            />
+            </div>
+          </div>
+          <img  src="../assets/booking-circle.png" alt="" class="mt-4">
+          <div class="w-2/5">
+            <label for="">To</label>
+            <div class="flex items-center p-3 border rounded-lg ">
+              <img src="../assets/bus depart.png" alt=""  />
+            <input  type="text" class="focus:outline-none w-2/5" />
+            </div>
+          </div>
+         </div>
+        <!-- ----date--------- -->
+         <div class="flex items-center justify-between my-10">
+         <div class="w-2/5">
+          <label for="">Departure Date</label>
+          <div class="flex items-center p-3 border rounded-lg ">
+
+          <input type="text"  class="focus:outline-none w-2/5"
+          />
+          </div>
+         </div>
+          <img src="../assets/clarity_calendar-line.png" alt="Arrive" class="mt-4"/>
+
+          <div class="w-2/5">
+            <label for="">Return Date</label>
+            <div class="flex items-center p-3 border rounded-lg">
+
+            <input  type="text" class="focus:outline-none w-2/5" />
+            </div>
+          </div>
+         </div>
+        <!-- --------Passengers---------- -->
+        <div class="accordion">
+          <div class="accordion-item">
+            <div class="accordion-header">Passengers <i class="fas fa-chevron-down"></i></div>
+            <div class="accordion-content">
+              <div>
+                <!-- ---------------- -->
+                <div class="flex justify-between">
+                  <div><p class="text-[#09355E] text-base">Adult (Age 12 and over)</p></div>
+                  <div class="flex items-center">
+                    <i class="fas fa-minus-square text-[#EDEDED] text-xl" ></i>
+                    <p class="text-[#09355E] font-bold text-base mx-5">1</p>
+                    <i class="fas fa-plus-square text-[#F8A930] text-xl"></i>
+                    <div class="flex items-center bg-[#EDEDED] px-2.5 py-2 rounded-lg ml-5">
+                      <img src="../assets/bookig-filter-Vector.png" alt="" srcset="" class="w-3.5  mr-5 ">
+                      <img src="../assets//bookig-check-Vector.png" alt="" srcset="" class="w-3.5">
+                    </div>
+                  </div>
+               </div>
+                <!-- ---------------- -->
+                <div class="flex justify-between my-5 ">
+                  <div><p class="text-[#09355E] text-base">Adult (Age 12 and over)</p></div>
+                  <div class="flex items-center">
+                    <i class="fas fa-minus-square text-[#F8A930] text-xl" ></i>
+                    <p class="text-[#09355E] font-bold text-base mx-5">2</p>
+                    <i class="fas fa-plus-square text-[#F8A930] text-xl"></i>
+                    <div class="flex items-center bg-[#EDEDED] px-2.5 py-2 rounded-lg ml-5">
+                      <img src="../assets/bookig-filter-Vector.png" alt="" srcset="" class="w-3.5  mr-5 ">
+                      <img src="../assets//bookig-check-Vector.png" alt="" srcset="" class="w-3.5">
+                    </div>
+                  </div>
+               </div>
+               <div class="flex border-t justify-between pt-4">
+                <p class="text-[#09355E]">Filter Search By :</p>
+                <div class="flex items-center ">
+                  <img src="../assets/bookig-filter-Vector.png" alt="" srcset="" class="w-4 ">
+                  <p class="mx-4 text-[#09355E]">Wheelchair Life Needed</p>
+                  <img src="../assets//bookig-check-Vector.png" alt="" srcset="" class="w-4">
+                </div>
+               </div>
+               </div>
+            </div>
+          </div>
+        </div><!-- --------Passengers---------- -->
+        <button class="bg-[#F8A930] text-[#09355E] w-full py-3 rounded-full mt-4"><i class="fas fa-search-location mr-3"></i> Search</button>
+      </div>
+    </div>
+    <!-- Booking Area end -->
+    <!-- about-section start -->
+<section class="about_section">
+    <div class="mx-auto lg:px-20  px-4">
+        <div class="grid sm:grid-cols-3 grid-cols-2 gap-4 about_section_card">
+            <div>
+              <div class="card_img_bg">
+                <img src="../assets/Schedule.png" alt="" srcset="">
+              </div>
+              <h5>Schedule</h5>
+              <p>View dates, locations, departure,<br/> and arrival times within the schedule.</p>
+            </div>
+            <div>
+              <div class="card_img_bg">
+                <img src="../assets/E-Ticket.png" alt="" srcset="">
+              </div>
+              <h5>E-Ticket Management</h5>
+              <p>Access and manage electronic <br/> tickets seamlessly with features <br/>like ticket storage</p>
+            </div>
+            <div>
+              <div class="card_img_bg">
+                <img src="../assets/E-Ticket.png" alt="" srcset="">
+              </div>
+              <h5>Tracking</h5>
+              <p>Track bus locations, arrival times,<br/> and departure schedules in real-time.</p>
+            </div>
+        </div>
+    </div>
+</section> <!-- about-section end -->
+<!-- _________map-section------------- -->
+<section class="map_details_section">
+  <div class=" mx-auto lg:px-20  px-4">
+    <h2 class="text-[#122D5A] font-semibold text-4xl mb-16 ml-10">Explore the Allure of Detroit</h2>
+    <div class="map_details">
+        <div style="height: 500px; ">
+          <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14588.855335229433!2d90.38425380000001!3d23.91748095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1705257458904!5m2!1sen!2sbd"
+          width="100%"
+          height="100%"
+          style="border: 0;border-radius: 40px;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+        </div>
+        <div class="map_details_content sm:mb-0 mb-10">
+          <!-- ------1--- -->
+          <div class="flex items-center mb-5 sm:justify-end justify-center">
+            <p class="text-[#9AA5B7] font-bold text-sm mr-2">Downtown Detroit</p>
+          <div class="text-white w-6 h-6 bg-[#9AA5B7] flex items-center justify-center rounded-full">1</div>
+          </div>
+          <!-- ------2--- -->
+          <div class="flex items-center mb-5 sm:justify-end justify-center">
+            <p class="text-[#9AA5B7] font-bold text-sm mr-2">Detroit skyline (night time)</p>
+          <div class="text-white w-6 h-6 bg-[#9AA5B7] flex items-center justify-center rounded-full">2</div>
+          </div>
+          <!-- ------3--- -->
+          <div class="flex items-center mb-5 sm:justify-end justify-center">
+            <p class="text-[#9AA5B7] font-bold text-sm mr-2">Detroit Airport (DTW)</p>
+          <div class="text-white w-6 h-6 bg-[#9AA5B7] flex items-center justify-center rounded-full">3</div>
+          </div>
+          <!-- ------4--- -->
+          <div class="flex items-center mb-5 sm:justify-end justify-center">
+            <p class="text-[#9AA5B7] font-bold text-sm mr-2">Detroit Lions (NFL football)</p>
+          <div class="text-white w-6 h-6 bg-[#9AA5B7] flex items-center justify-center rounded-full">4</div>
+          </div>
+          <!-- ------5--- -->
+          <div class="flex items-center mb-5 sm:justify-end justify-center">
+            <p class="text-[#9AA5B7] font-bold text-sm mr-2">Detroit Pistons (NBA basketball)</p>
+          <div class="text-white w-6 h-6 bg-[#9AA5B7] flex items-center justify-center rounded-full">5</div>
+          </div>
+          <!-- ------6--- -->
+          <div class="flex items-center mb-5 sm:justify-end justify-center">
+            <p class="text-[#9AA5B7] font-bold text-sm mr-2">Detroit Wings (Hockey)</p>
+          <div class="text-white w-6 h-6 bg-[#9AA5B7] flex items-center justify-center rounded-full">6</div>
+          </div>
+          <!-- ------7--- -->
+          <div class="flex items-center mb-5 sm:justify-end justify-center">
+            <p class="text-[#9AA5B7] font-bold text-sm mr-2">Detroit Tigers (Basketball)</p>
+          <div class="text-white w-6 h-6 bg-[#9AA5B7] flex items-center justify-center rounded-full">7</div>
+          </div>
+          <!-- ------8--- -->
+          <div class="flex items-center mb-5 sm:justify-end justify-center">
+            <p class="text-[#9AA5B7] font-bold text-sm mr-2">Oakland</p>
+          <div class="text-white w-6 h-6 bg-[#9AA5B7] flex items-center justify-center rounded-full">8</div>
+          </div>
+          <!-- ------9--- -->
+          <div class="flex items-center sm:justify-end justify-center">
+            <p class="text-[#9AA5B7] font-bold text-sm mr-2">Motown Museum</p>
+          <div class="text-white w-6 h-6 bg-[#9AA5B7] flex items-center justify-center rounded-full">9</div>
+          </div>
+        </div>
+    </div>
+  </div>
+</section><!-- _________map-section end------------- -->
+<!-- **************about_detroit************* -->
+<section class="about_detroit_section py-16">
+  <div class="mx-auto lg:px-20  px-4">
+    <h2  class="text-[#122D5A] font-semibold text-4xl mb-12">What Up Doe Detroit?</h2>
+    <div class="about_detroit">
+        <div>
+          <img src="../assets/detroit-left.png" alt="" srcset="" class="about_detroit_img_top">
+        </div>
+        <div>
+          <h3 class="text-[#122D5A] font-bold text-2xl">Detroit Dining Delights: A Foodie's Guide</h3>
+          <p class="text-base font-normal my-7">Indulge in Detroit's rich culinary tapestry with our curated guide to the city's must-visit eateries. From iconic diners serving up classic Coney dogs to trendy bistros offering innovative cuisine, there's something to satisfy every..</p>
+          <a href="http://" class="flex items-center font-bold mb-7 ">Learn More <img src="../assets/Arrow 3.png" alt="" class="pl-5"></a>
+          <div class="grid grid-cols-3 gap-4 detroit_bottom_img">
+            <img src="../assets/detroit-1.png" alt="" srcset="">
+            <img src="../assets/detroit-2.png" alt="" srcset="">
+            <img src="../assets/detroit-3.png" alt="" srcset="">
+          </div>
+        </div>
+    </div>
+  </div>
+</section><!-- **************about_detroit_end************* -->
+<!-- **********styup_to_section*********** -->
+<section class="stayup_to_section pb-12">
+  <div class="mx-auto lg:px-20  px-4">
+  <div class="stayup_to_bg">
+          <div class="stayup_content">
+              <div>
+                <h2>Stay Connected <br>and Plan Your Trip</h2>
+              </div>
+              <div class="stayup_to_card">
+                <p>Stay in the loop with the latest news, offers, and travel tips by subscribing to our newsletter. Get exclusive updates delivered straight to your inbox. Join now for a world of travel inspiration at your fingertips!</p>
+                <div class="flex ">
+                  <div class="relative xl:w-9/12 w-8/12"><input type="text" placeholder="Enter Your Email Address" ><i class="far fa-envelope absolute left-3 top-3"></i> </div>
+                  <button class="sigup_btn">Sign Up</button>
+                </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section><!-- **********styup_to_section end*********** -->
+
+<!-- **********footer************ -->
+  <footer class="bg-[#122D5A] py-16">
+      <div class="mx-auto lg:px-20  px-4">
+          <div class="footer_content">
+              <div class=""> 
+                <img src="../assets/footer-logo.png" alt="">
+                <h6 class="py-8">Copyright © 2024 <br>
+                  Bhadala, All Rights Reserved</h6>
+                  <div class="flex">
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-facebook px-8"></i>
+                    <img class="w-9 h-9" src="../assets/twitter.png" alt="">
+                  </div>
+              </div>
+             <!-- ------- -->
+             <div class="flex">
+              <div>
+                <h6>Explore</h6>
+                <div class="flex flex-col">
+                  <a href="http://">Home</a>
+                  <a href="http://" class="py-4">Plan Your Visit</a>
+                  <a href="http://">How it Works</a>
+                  <a href="http://" class="py-4">Blogs</a>
+                  <a href="http://">Locations</a>
+                </div>
+              </div>
+              <div class="ml-12">
+                <h6>Contact</h6>
+                <div>
+                  <p><i class="far fa-envelope mr-3"></i> info@bhadala.com</p>
+                </div>
+                <div class="pt-4">
+                  <p><i class="far fa-paper-plane mr-3"></i> 2050 15TH ST DETROIT MI 4816</p>
+                </div>
+              </div>
+             </div>
+              <div >
+                <h6>Subscribe to Newsletter</h6>
+                <div class="flex ">
+                  <div class="relative 2xl:w-9/12 xl:w-8/12 lg:w-7/12	w-6/12 "><input type="text" placeholder="Enter Your Email Address" ><i class="far fa-envelope absolute left-3 top-3"></i> </div>
+                  <button class="sigup_btn">Sign Up</button>
+                </div>
+              </div>
+          </div>
+      </div>
+  </footer>
+<!-- **********footer************ -->
+
+
+    <script src="../script/index.js"></script>
+  </body>
+</html>

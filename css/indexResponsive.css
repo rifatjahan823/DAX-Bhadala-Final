@@ -1,0 +1,80 @@
+@media screen and (max-width:1430px){
+    .stayup_to_card{
+        width: 63%;
+    }
+    .about_detroit_img_top{
+        width: 100%;
+      height: 370px;
+      }
+      .about_detroit{
+        align-items:center
+      }
+}
+@media screen and (max-width:1200px){
+    .stayup_to_card{
+        width: 70%;
+    }
+    .stayup_content {
+        grid-template-columns: repeat(2,1fr);
+      }
+      .stayup_to_bg {
+        padding: 130px 30px;
+        width: 90%;
+      }
+      .stayup_to_card{
+        width: 60%;
+       right: -12%;
+    }
+ 
+}
+@media screen and (max-width:1024px){
+    .stayup_to_bg {
+        padding: 30px;
+        width: 100%;
+        text-align: center;
+      }
+    .stayup_content {
+        grid-template-columns: repeat(1,1fr);
+      }
+    .stayup_to_card{
+        position: static;
+        margin: auto;
+    }
+    .detroit_bottom_img img{
+        height: 130px;
+        }
+        .footer_content{
+            grid-template-columns: repeat(2, 1fr);
+           gap:30px;
+          }
+}
+@media screen and (max-width:992px){
+    .stayup_to_card{
+        width: 80%;
+    }
+    .detroit_bottom_img img{
+        height: 110px;
+        }
+}
+@media screen and (max-width:768px){
+    .stayup_to_card{
+        width: 100%;
+    }
+      .detroit_bottom_img img{
+        height: 100px;
+        }
+      .about_detroit{
+        grid-template-columns: repeat(1,1fr);
+        margin-bottom: 5%;
+      }
+      .about_detroit_img_top{
+        width: 100%;
+       height: auto;
+      }
+}
+@media screen and (max-width:640px){
+    .map_details{
+        grid-template-columns: repeat(1,1fr);
+       
+      }
+}

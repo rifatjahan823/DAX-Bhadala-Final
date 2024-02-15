@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+}
+p {
+  margin: 0;
+}
+body {
+  background: #F2F2F2;
+  overflow-x: hidden;
+  font-family: "Poppins", sans-serif;
+}
+/* ********************Navigation************* */
+.desktop_menu li a{
+    color:  #FFFFFF;
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    margin: 0 6px;
+    padding: 10px 15px;
+  }
+  .desktop_menu button{
+    color: #FFFFFF;
+    font-size: 16px;
+    font-family: 400;
+    border: 1px solid #F8A930;
+    padding:6px 18px;
+    border-radius: 10px;
+  }
+   /* --------------moblibe-menu--------------- */
+  .offcanvas-menu {
+    position: fixed;
+    top: 0;
+    left: -100%; /* initially hidden */
+    width: 100%; /* takes up full width when opened */
+    height: 100%;
+    background-color: #122D5A;
+    padding: 20px;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+  }
+  
+  .offcanvas-menu.active {
+    left: 0;
+  }
+  
+  .menu-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    display: block;
+    margin-bottom: 15px;
+  }
+  
+  .menu-link:hover {
+    color: #ffc107;
+  }
+  
+  .menu-toggle {
+    position: absolute;
+    top: 40px;
+    right: 20px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 24px;
+    z-index: 2;
+  }
+  
+  .close-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 24px;
+    z-index: 2;
+    display: none;
+  }
+/* **********other-part-of navigation/book */
+.book_navigation_section{
+  background-color: #09355E;
+}
+  /* *********Footer********* */
+.footer_content{
+    display: grid;
+    grid-template-columns: repeat(3, 25% 35% 35%);
+    color: white;
+   gap: 2%;
+  }
+  .footer_content h6{
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10%;
+  }
+  .footer_content p{
+    font-size: 16px;
+    font-weight: 500;
+  }
+  .footer_content .fab{
+    color: #D4D4D4;
+    font-size: 32px;
+  }
+  
+  .footer_content input{
+    border: 1px solid #F5F5F5;
+    padding:8px 40px;
+    margin-right: 2%;
+    border-radius: 10px;
+    width: 95%;
+  }
+
+  .sigup_btn{
+    color: #09355E;
+    background: #F8A930;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 400;
+  padding: 8px 25px;
+  
+  }
+  

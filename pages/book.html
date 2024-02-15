@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bhadala</title>
+    <!-- Include Tailwind CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <!-- Include Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Include Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/fceb99dda2.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Additional styles -->
+    <link rel="stylesheet" href="../css/book.css" />
+    <link rel="stylesheet" href="../css/bookResponsive.css" />
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/globalResponsive.css" />
+
+  </head>
+  <body>
+    <div class="book_navigation_section pb-11">
+      <div class="mx-auto lg:px-16 px-4">
+        <!-- Navigation -->
+        <nav class="pt-4">
+          <div class="flex items-center justify-between flex-wrap">
+            <div class="logo">
+              <img src="../assets/Logo.png" alt="" srcset="" />
+            </div>
+            <div class="hidden md:block">
+              <ul class="desktop_menu flex items-center">
+                <li><a href="#">BUY TICKETS</a></li>
+                <li><a href="#">FARES</a></li>
+                <li><a href="#">SCHEDULE</a></li>
+                <li>
+                  <button><i class="fas fa-user mr-2"></i> Sign In</button>
+                </li>
+              </ul>
+            </div>
+            <!-- Mobile Menu -->
+            <div class="block md:hidden">
+              <div class="offcanvas-menu" id="offcanvasMenu">
+                <span class="close-icon" onclick="toggleMenu()">&times;</span>
+                <a href="#" class="menu-link">Home</a>
+                <a href="#" class="menu-link">About</a>
+                <a href="#" class="menu-link">Services</a>
+                <a href="#" class="menu-link">Contact</a>
+              </div>
+              <div class="menu-toggle" id="menuToggle" onclick="toggleMenu()">
+                &#9776;
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <!-- Navigation end -->
+      <di class="border-t border-gray-500 w-full block mt-5"></di>
+      <!-- **************stepper************** -->
+      <div class="mx-auto lg:px-16 px-4">
+        <div class="flex items-center justify-center mt-10 ">
+          <!-- ------1--- -->
+          <div class="flex items-center">
+            <div
+              class="bg-[#F8A930] text-white rounded-full sm:w-9 sm:h-9 w-6 h-6 flex items-center justify-center font-semibold text-lg"
+            >
+              1
+            </div>
+            <p class="sm:text-base text-xs text-white font-semibold sm:mx-4 mx-1">BOOK</p>
+            <div
+              class="bg-gradient-to-r from-slate-400 from-10% via-slate-200 via-30% to-slate-400 to-90% w-10 h-px"
+            ></div>
+          </div>
+          <!-- ------2--- -->
+          <div class="flex items-center sm:mx-5 mx-2">
+            <div
+              class="bg-[#F5F5F5] text-[#09355E] rounded-full sm:w-9 sm:h-9 w-6 h-6 flex items-center justify-center font-semibold text-lg"
+            >
+              2
+            </div>
+            <p class="sm:text-base text-xs  text-white font-semibold sm:mx-4 mx-1">INFO</p>
+            <div
+              class="bg-gradient-to-r from-slate-400 from-10% via-slate-200 via-30% to-slate-400 to-90% w-10 h-px"
+            ></div>
+          </div>
+          <!-- ------3--- -->
+          <div class="flex items-center">
+            <div
+              class="bg-[#F5F5F5] text-[#09355E] rounded-full sm:w-9 sm:h-9 w-6 h-6 flex items-center justify-center font-semibold text-lg"
+            >
+              3
+            </div>
+            <p class="sm:text-base text-xs  text-white font-semibold sm:mx-4 mx-1">PAY</p>
+            <div
+              class="bg-gradient-to-r from-slate-400 from-10% via-slate-200 via-30% to-slate-400 to-90% w-10 h-px"
+            ></div>
+          </div>
+          <!-- ------4--- -->
+          <div class="flex items-center sm:ml-5 ml-2">
+            <div
+              class="bg-[#F5F5F5] text-[#09355E] rounded-full sm:w-9 sm:h-9 w-6 h-6 flex items-center justify-center font-semibold text-lg"
+            >
+              4
+            </div>
+            <p class="sm:text-base text-xs  text-white font-semibold sm:mx-4 mx-1">CONFIRM</p>
+          </div>
+        </div>
+        <!-- ******stepper*** -->
+      </div>
+    </div>
+    <!-- Hero Content end -->
+    <!-- *******************Booking_details********** -->
+    <section class="booking_details_section">
+      <div class="booking_content_area">
+        <div class="booking_left ">
+          <div class="booking_form p-8 bg-white">
+            <div class="mx-auto px-4">
+              <div class="flex md:flex-row flex-col items-center justify-between gap-3">
+                <div class="md:w-2/3 w-full border rounded-lg px-3 py-3.5">
+                  <div class="flex items-center justify-between">
+                    <div class="flex items-center">
+                      <img
+                        src="../assets/bus depart.png"
+                        alt=""
+                        class="w-4 h-4"
+                      />
+                      <p class="mx-1 text-[#626262] lg:text-base md:text-sm sm:text-sm text-xs">From :</p>
+                    </div>
+                    <input
+                      type="text"
+                      placeholder="DTW (Detroit Airport)"
+                      class="focus:outline-none border border-[#F8A930] rounded-lg md:w-3/4 w-4/5 p-1.5 placeholder:text-[#09355E]"
+                    />
+                  </div>
+                </div>
+                <!-- --to--- -->
+                <div class="md:w-2/3 w-full border rounded-lg px-3 py-3.5">
+                  <div class="flex items-center justify-between">
+                    <div class="flex items-center">
+                      <img
+                        src="../assets/bus arrive.png"
+                        alt=""
+                        class="w-5 h-6"
+                      />
+                      <p class="mx-1 text-[#626262] lg:text-base md:text-sm sm:text-sm text-xs">To :</p>
+                    </div>
+                    <input
+                      type="text"
+                      placeholder="Downtown Detroit"
+                      class="focus:outline-none border border-[#F8A930] rounded-lg md:w-3/4 w-4/5 p-1.5 placeholder:text-[#09355E] "
+                    />
+                  </div>
+                </div>
+                <!-- ----search--- -->
+                <button class="py-5 px-3.5 text-center bg-[#f8a930] rounded-md hidden md:block">
+                  <i class="fas fa-search-location"></i>
+                </button>
+              </div>
+              <!-- ---bottom--- -->
+              <div class="md:grid lg:grid-cols-2 md:grid-cols-1 gap-3 mt-8">
+                <div class="md:flex items-center justify-between gap-3">
+                  <select
+                    name=""
+                    id=""
+                    class="md:w-2/4 w-full border bg-white rounded-lg p-3.5 text-[#626262]"
+                  >
+                    <option selected>One-way</option>
+                    <option value="One-way">One-way</option>
+                  </select>
+                  <div class=" md:w-2/4  flex gap-3 my-5 md:my-0">
+                    <div class="relative md:w-full w-2/4">
+                        <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
+                          <img src="../assets/calendar.png" alt="" srcset="">
+                        </div>
+                        <input datepicker type="text" class="border text-[#626262] text-sm rounded-lg focus:outline-none block w-full ps-10 py-3.5 " placeholder="Sat , Feb 6">
+                      </div>
+                      <div class="relative w-2/4 md:hidden block">
+                        <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
+                          <img src="../assets/calendar.png" alt="" srcset="">
+                        </div>
+                        <input datepicker type="text" class="border text-[#626262] text-sm rounded-lg focus:outline-none block w-full ps-10 py-3.5 " placeholder="Sat , Feb 6">
+                      </div>
+                  </div>
+                </div>
+      
+                <div >
+                    <div class="md:flex items-center justify-between gap-3 ">
+                        <div class="md:w-2/4 w-2/5 md:block hidden">
+                            <div class="relative w-full">
+                                <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
+                                  <img src="../assets/calendar.png" alt="" srcset="">
+                                </div>
+                                <input datepicker type="text" class="border text-[#626262] text-sm rounded-lg focus:outline-none block w-full ps-10 py-3.5 " placeholder="Sat , Feb 6">
+                              </div>
+                          </div>
+                      <select
+                        name=""
+                        id=""
+                        class="md:w-2/4 w-full border bg-white rounded-lg p-3.5 text-[#626262]"
+                      >
+                        <option selected>One-way</option>
+                        <option value="One-way">One-way</option>
+                      </select>
+                    </div>
+                    <button class="bg-[#F8A930] text-[#09355E] w-full py-3 rounded-lg mt-4 md:hidden block"><i class="fas fa-search-location mr-3"></i> Search</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        <!-- ***************Search_result_section********** -->
+    <section contenteditable="search_result_section " >
+        <div class=" xl:pl-10 lg:pl-1  lg:pr-2 py-8 pr-8 pl-8  ">
+            <div class="search_area ">
+                <div class="flex items-center justify-between mb-2 pr-6">
+                    <h5 class="font-semibold">Search Results (12)</h5>
+                    <div class="flex items-center">
+                        <i class="fas fa-arrow-left text-[#b4b4b4] text-xl"></i> <p class="text-[#626262]  mx-3">Tue, 02/06</p><i class="fas fa-arrow-right text-[#000000]"></i>
+                    </div>
+                    <select class="bg-inherit brounded-lg  text-[#626262]"  >
+                    <option selected>Sort by</option>
+                  </select>
+                </div>
+                <div class="search_card_result">
+                  <!-- ----------------- -->
+                <div class="search_card mt-6 md:block hidden">
+                  <div class="flex items-center justify-between mb-3 xl:px-5 lg:px-1 px-5">
+                      <div class="flex items-center">
+                          <div class="w-10 h-10 border border-[#F8A930] rounded-full flex items-center justify-center"><img src="../assets/bus depart.png" alt="" srcset="" class="w-4 h-4"></div>
+                          <p class="font-semibold ml-5">DTW (Detroit Airport) - Downtown Detroit</p>
+                      </div>
+                      <button class="border border-[#329642] text-[#329642] px-6 py-0.5 rounded-lg font-semibold">$15</button>
+                  </div>
+                  <div class="border border-t w-full block"></div>
+                  <div class="flex items-center justify-between mt-5 xl:px-5 lg:px-1 px-5 ">
+                      <div>
+                          <div>
+                              <div class="flex items-center">
+                                  <p class="text-[#626262] mr-4">DAX Rosa Park Terminal</p>
+                                  <p class="bg-[#000000] text-white h-8 w-12 flex items-center justify-center rounded-lg">313</p>
+                              </div>
+                              <p class="text-[#1F609F] mt-4">06:00 AM</p>
+                          </div>
+                      </div>
+                      <div>
+                          <img src="../assets/Arrow-search.png" alt="" srcset="" >
+                      <p class="text-[#626262] mt-4">1hr</p>
+                      </div>
+                      <div>
+                       <div class="flex">
+                      <img src="../assets/bookig-filter-Vector.png" alt="" srcset="" class="w-6 h-6 mt-3">
+                              <p class="text-[#626262]">DWT (McNamara/North Terminal)</p>
+                              </div>
+                              <p class="text-[#1F609F] mt-4 text-right">07:00 AM</p>
+                      </div>
+                  </div>
+              </div>
+              <!-- ----------------- -->
+              <div class="search_card mt-6 md:block hidden">
+                  <div class="flex items-center justify-between mb-3 xl:px-5 lg:px-1 px-5 ">
+                      <div class="flex items-center">
+                          <div class="w-10 h-10 border border-[#F8A930] rounded-full flex items-center justify-center"><img src="../assets/bus depart.png" alt="" srcset="" class="w-4 h-4"></div>
+                          <p class="font-semibold ml-5">DTW (Detroit Airport) - Downtown Detroit</p>
+                      </div>
+                      <button class="border border-[#329642] text-[#329642] px-6 py-0.5 rounded-lg font-semibold">$15</button>
+                  </div>
+                  <div class="border border-t w-full block"></div>
+                  <div class="flex items-center justify-between mt-5 xl:px-5 lg:px-1 px-5">
+                      <div>
+                          <div>
+                              <div class="flex items-center">
+                                  <p class="text-[#626262] mr-4">DAX Rosa Park Terminal</p>
+                                  <p class="bg-[#000000] text-white h-8 w-12 flex items-center justify-center rounded-lg">313</p>
+                              </div>
+                              <p class="text-[#1F609F] mt-4">06:00 AM</p>
+                          </div>
+                      </div>
+                      <div>
+                          <img src="../assets/Arrow-search.png" alt="" srcset="" >
+                      <p class="text-[#626262] mt-4">1hr</p>
+                      </div>
+                      <div>
+                       <div class="flex">
+                      <img src="../assets/bookig-filter-Vector.png" alt="" srcset="" class="w-6 h-6 mt-3">
+                              <p class="text-[#626262]">DWT (McNamara/North Terminal)</p>
+                              </div>
+                              <p class="text-[#1F609F] mt-4 text-right">07:00 AM</p>
+                      </div>
+                  </div>
+              </div>
+              <!-- ----------------- -->
+              <div class="search_card mt-6 md:block hidden">
+                  <div class="flex items-center justify-between mb-3 xl:px-5 lg:px-1 px-5">
+                      <div class="flex items-center">
+                          <div class="w-10 h-10 border border-[#F8A930] rounded-full flex items-center justify-center"><img src="../assets/bus depart.png" alt="" srcset="" class="w-4 h-4"></div>
+                          <p class="font-semibold ml-5">DTW (Detroit Airport) - Downtown Detroit</p>
+                      </div>
+                      <button class="border border-[#329642] text-[#329642] px-6 py-0.5 rounded-lg font-semibold">$15</button>
+                  </div>
+                  <div class="border border-t w-full block"></div>
+                  <div class="flex items-center justify-between mt-5 xl:px-5 lg:px-1 px-5">
+                      <div>
+                          <div>
+                              <div class="flex items-center">
+                                  <p class="text-[#626262] mr-4">DAX Rosa Park Terminal</p>
+                                  <p class="bg-[#000000] text-white h-8 w-12 flex items-center justify-center rounded-lg">313</p>
+                              </div>
+                              <p class="text-[#1F609F] mt-4">06:00 AM</p>
+                          </div>
+                      </div>
+                      <div>
+                          <img src="../assets/Arrow-search.png" alt="" srcset="" >
+                      <p class="text-[#626262] mt-4">1hr</p>
+                      </div>
+                      <div>
+                       <div class="flex">
+                      <img src="../assets/bookig-filter-Vector.png" alt="" srcset="" class="w-6 h-6 mt-3">
+                              <p class="text-[#626262]">DWT (McNamara/North Terminal)</p>
+                              </div>
+                              <p class="text-[#1F609F] mt-4 text-right">07:00 AM</p>
+                      </div>
+                  </div>
+              </div>
+              <!-- ------------------mobile-card -->
+              <div class="search_card mt-6 md:hidden block px-5">
+                <p class="text-center">1hr</p>
+                <div class="flex items-center justify-between">
+                  <p class="text-[#1F609F]">06:00 AM</p>
+                  <img src="../assets/Line 25.png" alt="" srcset="">
+                  <p class="text-[#1F609F]">07:00 AM</p>
+                </div>
+                <div  class="flex items-center justify-between gap-3 mt-2">
+                  <p class="text-sm text-[#626262]">DAX Rosa Park Terminal</p>
+                  <p class="bg-[#000000] text-white h-8 w-8 flex items-center justify-center rounded-lg ">102</p>
+                  <p class="text-sm text-[#626262]" >DWT (McNamara/North Terminal)</p>
+                </div>
+                <div class="flex items-center my-4">
+                  <img src="../assets/bus depart.png" alt="" srcset="">
+                  <p class="ml-2">DTW (Detroit Airport) - Downtown Detroit</p>
+                </div>
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center">
+                    <button class="border border-[#329642] text-[#329642] px-4 py-0.5 rounded-md font-semibold mr-2">$10</button>
+                    <p class="text-[#626262]">for each passenger</p>
+                  </div>
+                  <img src="../assets//bookig-filter-Vector.png" alt="" srcset="">
+                </div>
+              </div>
+              <div class="search_card mt-6 md:hidden block px-5">
+                <p class="text-center">1hr</p>
+                <div class="flex items-center justify-between">
+                  <p class="text-[#1F609F]">06:00 AM</p>
+                  <img src="../assets/Line 25.png" alt="" srcset="">
+                  <p class="text-[#1F609F]">07:00 AM</p>
+                </div>
+                <div  class="flex items-center justify-between gap-3 mt-2">
+                  <p class="text-sm text-[#626262]">DAX Rosa Park Terminal</p>
+                  <p class="bg-[#000000] text-white h-8 w-8 flex items-center justify-center rounded-lg ">102</p>
+                  <p class="text-sm text-[#626262]" >DWT (McNamara/North Terminal)</p>
+                </div>
+                <div class="flex items-center my-4">
+                  <img src="../assets/bus depart.png" alt="" srcset="">
+                  <p class="ml-2">DTW (Detroit Airport) - Downtown Detroit</p>
+                </div>
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center">
+                    <button class="border border-[#329642] text-[#329642] px-4 py-0.5 rounded-md font-semibold mr-2">$10</button>
+                    <p class="text-[#626262]">for each passenger</p>
+                  </div>
+                  <img src="../assets//bookig-filter-Vector.png" alt="" srcset="">
+                </div>
+              </div>
+              <div class="search_card mt-6 md:hidden block px-5">
+                <p class="text-center">1hr</p>
+                <div class="flex items-center justify-between">
+                  <p class="text-[#1F609F]">06:00 AM</p>
+                  <img src="../assets/Line 25.png" alt="" srcset="">
+                  <p class="text-[#1F609F]">07:00 AM</p>
+                </div>
+                <div  class="flex items-center justify-between gap-3 mt-2">
+                  <p class="text-sm text-[#626262]">DAX Rosa Park Terminal</p>
+                  <p class="bg-[#000000] text-white h-8 w-8 flex items-center justify-center rounded-lg ">102</p>
+                  <p class="text-sm text-[#626262]" >DWT (McNamara/North Terminal)</p>
+                </div>
+                <div class="flex items-center my-4">
+                  <img src="../assets/bus depart.png" alt="" srcset="">
+                  <p class="ml-2">DTW (Detroit Airport) - Downtown Detroit</p>
+                </div>
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center">
+                    <button class="border border-[#329642] text-[#329642] px-4 py-0.5 rounded-md font-semibold mr-2">$10</button>
+                    <p class="text-[#626262]">for each passenger</p>
+                  </div>
+                  <img src="../assets//bookig-filter-Vector.png" alt="" srcset="">
+                </div>
+              </div>
+                </div>
+            </div>
+        </div>
+    </section>
+        </div>
+        <!-- ----bookin_right------- -->
+      <div class=" pl-4 booking_right_area" >
+        <div >
+          <div class="lg:pr-6 pr-4"> 
+            <div style="height: 380px;" class="pt-8">
+              <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14588.855335229433!2d90.38425380000001!3d23.91748095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1705257458904!5m2!1sen!2sbd"
+              width="100%"
+              height="100%"
+              style="border: 0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+            </div>
+          </div>
+          <!-- ------------details------------ -->
+          <div class="">
+            <div class=" border-b w-full block mt-8 pb-4">
+              <button class="text-[#09355E] font-semibold mr-48" onclick="openCity('Details')">Details</button>
+              <button class="" onclick="openCity('Statistics')">Statistics</button>
+            </div>
+            <div class="lg:pr-6 pr-4 booking_right_details">
+
+            <div id="Details" class=" summary mt-5">
+            <h6 class="font-semibold">Summary</h6>
+            <div class="flex items-center justify-between mt-6"><p>Departure Date & Time :</p><p>Wed, 02/07, 09:00 AM</p> </div>
+            <div class="flex items-center justify-between mt-6"><p>Arrival Date & Time :</p> <p>Wed, 02/07, 09:35 AM</p></div>
+            <div class="flex items-center justify-between mt-6"><p>Estimation :</p> <p>35mins</p></div>
+            <div class="flex items-center justify-between mt-6"><p>From :</p> <p>DTW</p></div>
+            <div class="flex items-center justify-between mt-6"><p>To :</p> <p>Downtown Detroit</p></div>
+            <div class="flex items-center justify-between mt-6"><p>Ticket Type :</p> <p>One-way</p></div>
+            </div>
+            <div id="Statistics" class="summary border mt-5 rounded-lg p-4" style="display:none">
+              <div class="flex justify-between items-center">
+                <h6 class="text-[#151619] ">Peak Times</h6>
+                <div class=" flex items-center">
+                  <div class="w-32">
+                    <div class="relative ">
+                      <div class="absolute inset-y-0 start-0 flex items-center ps-3.5  pointer-events-none ">
+                        <img src="../assets/calendar.png" alt="" srcset="">
+                      </div>
+                      <input datepicker type="text" class="border-none text-[#626262] text-xs rounded-lg focus:outline-none block w-full ps-10 mt-1" placeholder="Last 30 Days">
+                    </div>
+                  </div>
+                  <div>
+                    <select name="" id="" class="bg-inherit brounded-lg text-xs	 text-[#626262]">
+                      <option selected value="">Sunday</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-8">
+                <img src="../assets/bookgraph.png" alt="" srcset="">
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>    <!-- *********end Bookinf_details******** -->
+
+<!-- **********footer************ -->
+<footer class="bg-[#122D5A] py-16">
+  <div class="mx-auto lg:px-20  px-4">
+      <div class="footer_content">
+          <div class=""> 
+            <img src="../assets/footer-logo.png" alt="">
+            <h6 class="py-8">Copyright © 2024 <br>
+              Bhadala, All Rights Reserved</h6>
+              <div class="flex">
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-facebook px-8"></i>
+                <img class="w-9 h-9" src="../assets/twitter.png" alt="">
+              </div>
+          </div>
+         <!-- ------- -->
+         <div class="flex">
+          <div>
+            <h6>Explore</h6>
+            <div class="flex flex-col">
+              <a href="http://">Home</a>
+              <a href="http://" class="py-4">Plan Your Visit</a>
+              <a href="http://">How it Works</a>
+              <a href="http://" class="py-4">Blogs</a>
+              <a href="http://">Locations</a>
+            </div>
+          </div>
+          <div class="ml-12">
+            <h6>Contact</h6>
+            <div>
+              <p><i class="far fa-envelope mr-3"></i> info@bhadala.com</p>
+            </div>
+            <div class="pt-4">
+              <p><i class="far fa-paper-plane mr-3"></i> 2050 15TH ST DETROIT MI 4816</p>
+            </div>
+          </div>
+         </div>
+          <div >
+            <h6>Subscribe to Newsletter</h6>
+            <div class="flex ">
+              <div class="relative 2xl:w-9/12 xl:w-8/12 lg:w-7/12	w-6/12 "><input type="text" placeholder="Enter Your Email Address" ><i class="far fa-envelope absolute left-3 top-3"></i> </div>
+              <button class="sigup_btn">Sign Up</button>
+            </div>
+          </div>
+      </div>
+  </div>
+</footer>
+<!-- **********footer************ -->
+    
+
+<script src="../path/to/flowbite/dist/datepicker.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/datepicker.min.js"></script>
+    <script src="../script/index.js"></script>
+  </body>
+</html>
