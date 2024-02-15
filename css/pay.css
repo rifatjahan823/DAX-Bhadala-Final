@@ -1,0 +1,16 @@
+.pay_accordion_header {
+    padding: 10px 0px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .pay_accordion_content {
+    display: none;
+    padding: 10px;
+  }
+  
+  .pay_accordion_item.active .pay_accordion_content {
+    display: block;
+  }

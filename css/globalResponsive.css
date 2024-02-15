@@ -19,6 +19,16 @@
       grid-template-columns: repeat(2, 1fr);
      gap:30px;
     }
+    .footer_content h6{
+      font-size: 16px;
+       
+     }
+     .footer_content p{
+       font-size: 14px;
+      }
+     .footer_content a{
+       font-size: 14px;
+      }
 }
 @media screen and (max-width:768px){
       .footer_content{
@@ -35,4 +45,5 @@
        .footer_content a{
          font-size: 14px;
         }
+  
 }

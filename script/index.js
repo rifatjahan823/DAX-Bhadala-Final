@@ -42,6 +42,17 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 });
+// *************pay-accordion**********
+document.addEventListener('DOMContentLoaded', function () {
+  const accordionItems = document.querySelectorAll('.pay_accordion_item');
+
+  accordionItems.forEach(item => {
+    const header = item.querySelector('.pay_accordion_header');
+    header.addEventListener('click', function () {
+      item.classList.toggle('active');
+    });
+  });
+});
 
 // *******************book-tab-menu*********
 function openCity(cityName) {
@@ -51,4 +62,22 @@ function openCity(cityName) {
     x[i].style.display = "none";  
   }
   document.getElementById(cityName).style.display = "block";  
+}
+// *******************pay-tab-menu*********
+function openPayment(paymentName) {
+  var i;
+  var x = document.getElementsByClassName("payment");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  document.getElementById(paymentName).style.display = "block";  
+}
+// *******************pay-tab-menu-desktopn*********
+function openPayment_desktop(paymentName) {
+  var i;
+  var x = document.getElementsByClassName("payment_desktop");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  document.getElementById(paymentName).style.display = "block";  
 }
