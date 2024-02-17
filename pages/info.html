@@ -128,45 +128,45 @@
                         <div class="passenger_card">
                             <p class="text-[#D99749] mb-5">Passenger #1 - Adult</p>
                             <div class="flex lg:flex-row flex-col items-center justify-between gap-5">
-                                <div class="lg:w-3/5 w-full border rounded-md px-3 py-3.5">
+                                <div class="lg:w-3/5 w-[90%] border rounded-md px-3 py-3.5">
                                     <div class="flex items-center justify-between">
                                   <p class="mx-1 text-[#626262] lg:text-base md:text-sm sm:text-sm text-xs">First Name :</p>
                                       <input
                                         type="text"
                                         placeholder="Julia"
-                                        class="focus:outline-none border rounded-md lg:w-3/5 md:w-[70%] p-1.5 placeholder:text-[#09355E]"
+                                        class="focus:outline-none border rounded-md lg:w-3/5 md:w-[70%] sm:w-[80%] w-[65%] p-1.5 placeholder:text-[#09355E]"
                                       />
                                     </div>
                                   </div>
                                   <!-- --to--- -->
-                                  <div class="lg:w-3/5 w-full border rounded-md px-3 py-3.5">
+                                  <div class="lg:w-3/5 w-[90%] border rounded-md px-3 py-3.5">
                                     <div class="flex items-center justify-between">                                
                                         <p class="mx-1 text-[#626262] lg:text-base md:text-sm sm:text-sm text-xs">Last Name :</p>
                                       <input
                                         type="text"
                                         placeholder="Robert"
-                                        class="focus:outline-none border rounded-md lg:w-3/5 md:w-[70%]   p-1.5 placeholder:text-[#09355E] "
+                                        class="focus:outline-none border rounded-md lg:w-3/5 md:w-[70%] sm:w-[80%] w-[65%] p-1.5 placeholder:text-[#09355E] "
                                       />
                                     </div>
                                   </div>
                             </div>
                             <div class="flex lg:flex-row flex-col items-center justify-between gap-5 mt-6">
-                                <div class="lg:w-3/5 w-full border rounded-md px-3 py-3.5">
+                                <div class="lg:w-3/5 w-[90%]  border rounded-md px-3 py-3.5">
                                     <div class="flex items-center justify-between">
                                   <p class="mx-1 text-[#626262] lg:text-base md:text-sm sm:text-sm text-xs">
                                     Email :</p>
                                       <input
                                         type="text"
                                         placeholder="julia231@gmail.com"
-                                        class="focus:outline-none border rounded-md lg:w-3/5 md:w-[70%] p-1.5 placeholder:text-[#09355E]"
+                                        class="focus:outline-none border rounded-md lg:w-3/5 md:w-[70%] sm:w-[80%] w-[65%] p-1.5 placeholder:text-[#09355E]"
                                       />
                                     </div>
                                   </div>
                                   <!-- --to--- -->
-                                  <div class="lg:w-3/5 w-full border rounded-md px-3 py-3.5">
+                                  <div class="lg:w-3/5 w-[90%] border rounded-md px-3 py-3.5">
                                     <div class="flex items-center justify-between">                                
                                         <p class="mx-1 text-[#626262] lg:text-base md:text-sm sm:text-sm text-xs">Phone :</p>
-                                        <div id="phoneForm" class="flex lg:w-3/4 md:w-[70%] gap-3">
+                                        <div id="phoneForm" class="flex lg:w-3/4 md:w-[70%]  sm:w-[78%] w-[65%] gap-3">
                                             <select id="countryCode" name="countryCode" class="border bg-white rounded-md text-[#626262]">
                                               <!-- Add country codes as options -->
                                               <option value="+1">+1</option>
@@ -174,7 +174,7 @@
                                               <option value="+91">+91</option>
                                               <!-- Add more options as needed -->
                                             </select>
-                                            <input type="tel" id="phoneNumber" name="phoneNumber" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" class="focus:outline-none border rounded-md lg:w-3/4 md:w-[80%] p-1.5 placeholder:text-[#09355E]">
+                                            <input type="tel" id="phoneNumber" name="phoneNumber" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" class="focus:outline-none border rounded-md lg:w-3/4 md:w-[80%]  w-[100%] p-1.5 placeholder:text-[#09355E]">
                                           </div>
                                     </div>
                                   </div>
@@ -182,57 +182,80 @@
                         </div>
                         <button class="bg-[#F8A930] text-[#09355E] w-full rounded-md mt-8 py-2">Confirm and Continue</button>
                     </div>
-                    <!-- ***********ticket-summery*********** -->
-                    <div class="ticket_summey mt-8 ">
-                        <div class="flex items-center justify-between">
-                            <h3 class="font-semibold">Ticket Summary</h3>
-                            <p>Edit</p>
-                        </div>
-                        <div>
-                            <div class="flex items-start border-t mt-10 pt-7">
-                                <p class="bg-[#000000] text-white h-8 w-10 flex items-center justify-center rounded-md mr-3">102</p>
-                               <div>
-                                <h4 class="font-semibold">DTW (Detroit Airport) - Downtown Detroit</h4>
-                                <div class="flex items-center justify-between text-[#1F609F] mt-5"><p>Date :</p> <p>Feb 6 , Sat</p></div>
-                                <div class="flex items-center justify-between text-[#1F609F] mt-5"><p>Time :</p> <p>06:00 AM ~ 07:00 AM</p></div>
-                                <div class="flex items-center justify-between text-[#626262] mt-5"><p>Ticket Type :</p> <p>One-way</p></div>
-                                <div class="flex items-center justify-between text-[#626262] mt-5"><p>Passengers :</p> <p>Adult x1</p></div>
-                                <div class="flex items-center justify-between text-[#626262] mt-5"><p>Wheelchair Needed :</p> <p>x1</p></div>
-                               </div>
-                            </div>
-                            <div class="border-t-2 border-[#626262] mt-12 pt-8 text-right">
-                                <p class="font-semibold text-[#65656B]">Total : <span class="text-[#2B7723]">$15.00</span></p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- _________mobile_ticket-summery____ -->
-                    <div class="mobile_ticket_summery my-8 md:hidden block">
+                       <!-- _________mobile_ticket-summery____ -->
+                       <div class="mobile_ticket_summery my-8 md:hidden block">
                         <div class="info_accordion_item">
                           <div class="info_accordion_header">
                            <div class="flex items-center">
-                            <p class="font-semibold mr-3">Ticket Summary</p> <span>Edit </span>
+                            <p class="font-semibold mr-3">Invoice Preview</p> 
                            </div>
                             <i class="fas fa-chevron-down"></i></div>
-                          <div class="info_accordion_content">
+                          <div class="info_accordion_content hidden py-2">
                             <div>
-                                <div class="flex items-start justify-end border-t mt-10 pt-7">
-                                    <p class="bg-[#000000] text-white h-8 w-10 flex items-center justify-center rounded-md mr-3">102</p>
-                                   <div>
-                                    <h4 class="font-semibold">DTW (Detroit Airport) - Downtown Detroit</h4>
-                                    <div class="flex items-center justify-between text-[#1F609F] mt-5"><p>Date :</p> <p>Feb 6 , Sat</p></div>
-                                    <div class="flex items-center justify-between text-[#1F609F] mt-5"><p>Time :</p> <p>06:00 AM ~ 07:00 AM</p></div>
-                                    <div class="flex items-center justify-between text-[#626262] mt-5"><p>Ticket Type :</p> <p>One-way</p></div>
-                                    <div class="flex items-center justify-between text-[#626262] mt-5"><p>Passengers :</p> <p>Adult x1</p></div>
-                                    <div class="flex items-center justify-between text-[#626262] mt-5"><p>Wheelchair Needed :</p> <p>x1</p></div>
-                                   </div>
+                              <div class="bg-[#F9F9F9]  rounded-[10px] py-8">
+                                <div class="flex justify-between px-6">
+                                  <div>
+                                    <p class="font-bold text-[#2B7723] text-[20px]">$20.00</p>
+                                    <p class="text-[12px]">Wed, 02/07</p>
+                                  </div>
+                                  <a href="" class="text-[#09355E] text-[12px] decoration-solid" >Add Voucher</a>
                                 </div>
-                                <div class="border-t-2 border-[#626262] mt-12 pt-8 text-right">
-                                    <p class="font-semibold text-[#65656B]">Total : <span class="text-[#2B7723]">$15.00</span></p>
+                                <div class="bg-[#09355E]  flex justify-between items-center text-white  my-8 px-4 py-8">
+                                
+                                    <div class="bg-black w-[38px] h-[26px] text-[12px] rounded-md flex items-center justify-center">
+                                      102
+                                    </div>
+                                    <div class="sm:text-base text-[12px]">
+                                      <p>(6:00 AM) D2A2 Blake Transit Center</p> 
+                                      <p>-</p>
+                                      <p> (7:00 AM) D2A2 Grand Circuit Park  </p>
+                                    </div>
+                                 
+                                  <button class="w-[50px] h-[24px] bg-[#F8A930] text-[#09355E] tetx-[12px] rounded-md">
+                                    $15
+                                  </button>
                                 </div>
+                                <div class="flex justify-between items-center border-b border-gray-800 mx-4">
+                                  <div class="flex gap-x-8 my-5">
+                                    <p>Emily Johnson</p>
+                                    <p>x1 Adult</p>
+                                  </div>
+                                  <p>$10.00</p>
+                      
+                                </div>
+                                <div class="flex justify-between mt-5 px-4">
+                                  <p class=" text-[#65656B] font-semibold ">Total </p>
+                                <p class="font-semibold text-[#2B7723]">$20.00</p>
+                                </div>
+                                <div class="mt-6  px-4">
+                                  <button class="w-full block text-[#09355E] bg-[#F8A930] rounded-[10px] py-2  ">Pay now</button>
+                                </div>
+                               </div>
                             </div>
                              </div>
                           </div>
                         </div>
+                    <!-- ***********Agree Terms and Conditions*********** -->
+                    <div class="ticket_summey md:mt-20 mt-6 md:mb-0 mb-12">
+                        <div class="flex items-center justify-between ">
+                            <h3 class="font-semibold text-sm">Agree Terms and Conditions</h3>
+                        </div>
+                        <div>
+                          <div class="space-y-4 lg:mt-6 md:mt-0 mt-4">
+                            <div class="bg-[#F9F9F9] rounded-[10px] p-8">
+                              <div class="flex gap-x-3 items-center mb-5">
+                                <input type="checkbox" id="" name="" value="" class="">
+                                <p class="2xl:text-base sm:text-sm text-[10px]">I have read <span class="text-[#09355E] font-medium">Terms and Conditions</span>. You will receive an email confirmation with your ticket’s boarding QR code.</p>
+                              </div>
+                              <div class="flex gap-x-3 items-center">
+                                <input type="checkbox" id="" name="" value="">
+                                <p class="2xl:text-base xl:text-sm sm:text-sm text-[10px]">Tickets are Non-refundable at the time of purchase. Changes for reservation’s time and date can be made up to 20 minutes prior to scheduled departure</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                 
                       </div>
                 </div>
             </div>

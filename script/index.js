@@ -23,7 +23,6 @@ function toggleDropdown() {
 // *************accordion**********
 document.addEventListener('DOMContentLoaded', function () {
   const accordionItems = document.querySelectorAll('.accordion-item');
-
   accordionItems.forEach(item => {
     const header = item.querySelector('.accordion-header');
     header.addEventListener('click', function () {
@@ -34,7 +33,6 @@ document.addEventListener('DOMContentLoaded', function () {
 // *************info-accordion**********
 document.addEventListener('DOMContentLoaded', function () {
   const accordionItems = document.querySelectorAll('.info_accordion_item');
-
   accordionItems.forEach(item => {
     const header = item.querySelector('.info_accordion_header');
     header.addEventListener('click', function () {
@@ -42,6 +40,43 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 });
+// *************modile-nav-accordion**********
+document.addEventListener('DOMContentLoaded', function () {
+  const accordionItems = document.querySelectorAll('.nav_accordion_item');
+  accordionItems.forEach(item => {
+    const header = item.querySelector('.nav_accordion_header');
+    header.addEventListener('click', function () {
+      item.classList.toggle('active');
+    });
+  });
+});
+// *************Metro-Detroit**********
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    // Toggle the 'active' class for styling
+    this.classList.toggle("active");
+    
+    // Toggle the icon class to change the icon
+    var icon = this.querySelector("i");
+    icon.classList.toggle("fa-chevron-down");
+    icon.classList.toggle("fa-chevron-right");
+
+    // Select the next element (panel) after the clicked accordion
+    var panel = this.nextElementSibling;
+
+    // Check if the panel is currently displayed
+    if (panel.style.display === "block" || window.getComputedStyle(panel).display === "block") {
+      // If displayed, hide it
+      panel.style.display = "none";
+    } else {
+      // If not displayed, show it
+      panel.style.display = "block";
+    }
+  });
+}
 // *************pay-accordion**********
 document.addEventListener('DOMContentLoaded', function () {
   const accordionItems = document.querySelectorAll('.pay_accordion_item');

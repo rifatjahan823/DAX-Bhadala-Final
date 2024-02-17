@@ -86,11 +86,11 @@
             <!-- ------2--- -->
             <div class="flex items-center sm:mx-5 mx-2">
               <div
-                class="bg-[#4F9747]  text-[#09355E]  rounded-full sm:w-9 sm:h-9 w-6 h-6 flex items-center justify-center font-semibold text-lg"
+                class="bg-[#4F9747]  text-white   rounded-full sm:w-9 sm:h-9 w-6 h-6 flex items-center justify-center font-semibold text-lg"
               >
               <i class="fas fa-check"></i>
               </div>
-              <p class="sm:text-base text-xs  text-white font-semibold sm:mx-4 mx-1">INFO</p>
+              <p class="sm:text-base text-xs text-white font-semibold sm:mx-4 mx-1">INFO</p>
               <div
                 class="bg-gradient-to-r from-slate-400 from-10% via-slate-200 via-30% to-slate-400 to-90% sm:w-10 w-6 h-px"
               ></div>
@@ -130,7 +130,7 @@
                      <div class="md:block hidden">
                       <h1 class="font-semibold my-10">Chose Payment Method</h1>
                       <div class="grid grid-cols-2 gap-3">
-                        <div class="rounded-lg border shadow-md duration-500 hover:border-amber-500 p-3 space-y-5"onclick="openPayment_desktop('Credit')">
+                        <div class="rounded-lg border shadow-md duration-500 hover:border-amber-500 p-3 space-y-5"onclick="openPayment_desktop('Credit_desktop')">
                           <div class="flex justify-between">
                             <p class="font-semibold"> Cards</p>
                             <div class="flex gap-x-2">
@@ -141,7 +141,7 @@
                           </div>
                               <p class=" font-light text-sm">Widely accepted payment methods for convenience.</p>
                         </div>
-                        <div class="rounded-lg border shadow-md  hover:border-amber-500 duration-500  p-3 space-y-5" onclick="openPayment_desktop('Cash')">
+                        <div class="rounded-lg border shadow-md  hover:border-amber-500 duration-500  p-3 space-y-5" onclick="openPayment_desktop('Cash_desktop')">
                           <div class="flex justify-between">
                             <p class="font-semibold"> Cash pay</p>
                             <div class="flex gap-x-2">
@@ -150,7 +150,7 @@
                           </div>
                               <p class=" font-light text-sm">Fast and easy transaction with your phone.</p>
                         </div>
-                        <div class="rounded-lg border shadow-md  hover:border-amber-500  duration-500  p-3 space-y-5"onclick="openPayment_desktop('Paypal')">
+                        <div class="rounded-lg border shadow-md  hover:border-amber-500  duration-500  p-3 space-y-5"onclick="openPayment_desktop('Paypal_desktop')">
                           <div class="flex justify-between">
                             <p class="font-semibold"> Paypal</p>
                             <div class="flex gap-x-2">
@@ -159,7 +159,7 @@
                           </div>
                               <p class=" font-light text-sm">Secure online transactions with buyer protection.</p>
                         </div>
-                        <div class="rounded-lg border shadow-md  hover:border-amber-500 duration-500  p-3 space-y-5"onclick="openPayment_desktop('Zelle')">
+                        <div class="rounded-lg border shadow-md  hover:border-amber-500 duration-500  p-3 space-y-5"onclick="openPayment_desktop('Zelle_desktop')">
                           <div class="flex justify-between">
                             <p class="font-semibold"> Zelle</p>
                             <div class="flex gap-x-2">
@@ -170,7 +170,7 @@
                         </div>
                     </div>
                       <!-- ----------cards---- -->
-                      <div id="Credit" class="my-12 payment_desktop">
+                      <div id="Credit_desktop" class="my-12 payment_desktop">
                         <div class="my-10">
                           <p>card information</p>
                           <div class="border border-gray-300 rounded-md bg-white">
@@ -195,7 +195,7 @@
                           </div>
                     </div>
                     <!-- ---cash----- -->
-                    <div id="Cash" class="payment_desktop hidden">
+                    <div id="Cash_desktop" class="payment_desktop hidden">
                       <div x-data="{ modalOpen: false }"
                       @keydown.escape.window="modalOpen = false"
                       class=" z-50 ">
@@ -250,11 +250,11 @@
                 </div>
                     </div>
                     <!-- ---Paypal----- -->
-                    <div id="Paypal" class="payment_desktop hidden">
+                    <div id="Paypal_desktop" class="payment_desktop hidden">
 
                     </div>
                     <!-- ---cash----- -->
-                    <div id="Zelle" class="payment_desktop hidden">
+                    <div id="Zelle_desktop" class="payment_desktop hidden">
 
                     </div>
                      </div>
@@ -327,17 +327,17 @@
                                   <p class="font-bold">Ticket Summary</p>
                                   <p>Wed, 02/07</p>
                                 </div>
-                                <div class="bg-[#09355E] p-6 flex justify-between text-white rounded-md my-8">
-                                  <div class="flex items-center gap-x-2">
+                                <div class="bg-[#09355E] sm:p-8 p-2 flex flex-wrap justify-between text-white rounded-md my-8">
+                                  <div class="flex items-center gap-x-2 " >
                                     <div class="bg-black p-1 px-2 rounded-md">
                                       102
                                     </div>
-                                    <div>
+                                    <div class="sm:text-base [11px]">
                                       <p>(9:00 AM) DTW -</p> 
                                       <p> (9:35 AM) Downtown Detroit </p>
                                     </div>
                                   </div>
-                                  <div class="bg-amber-500 px-8 rounded-md flex items-center text-[#09355E] ">
+                                  <div class="bg-amber-500 px-8 py-2 rounded-md flex items-center text-[#09355E] ">
                                     $15
                                   </div>
                                 </div>
@@ -367,17 +367,17 @@
                           <p class="font-bold">Ticket Summary</p>
                           <p>Wed, 02/07</p>
                         </div>
-                        <div class="bg-[#09355E] p-6 flex justify-between text-white rounded-md my-8">
+                        <div class="bg-[#09355E] p-6 flex justify-between flex-wrap text-white rounded-md my-8">
                           <div class="flex items-center gap-x-2">
                             <div class="bg-black p-1 px-2 rounded-md">
                               102
                             </div>
-                            <div>
+                            <div class="lg:text-base text-[12px]">
                               <p>(9:00 AM) DTW -</p> 
                               <p> (9:35 AM) Downtown Detroit </p>
                             </div>
                           </div>
-                          <div class="bg-amber-500 px-8 rounded-md flex items-center text-[#09355E] ">
+                          <div class="bg-amber-500 px-8 py-2 rounded-md flex items-center text-[#09355E] ld:mt-0 mt-3">
                             $15
                           </div>
                         </div>

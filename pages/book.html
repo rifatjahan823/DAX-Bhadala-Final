@@ -34,10 +34,11 @@
     <div class="book_navigation_section pb-11">
       <div class="mx-auto lg:px-16 px-4">
         <!-- Navigation -->
-        <nav class="pt-4">
+        <nav class="pt-5 z-50">
           <div class="flex items-center justify-between flex-wrap">
             <div class="logo">
-              <img src="../assets/Logo.png" alt="" srcset="" />
+              <img class="md:block hidden" src="../assets/Logo.png" alt="" srcset="" />
+              <img class="block md:hidden" src="../assets/Logo-mobile.png" alt="" srcset="" />
             </div>
             <div class="hidden md:block">
               <ul class="desktop_menu flex items-center">
@@ -50,13 +51,31 @@
               </ul>
             </div>
             <!-- Mobile Menu -->
-            <div class="block md:hidden">
+            <div class="block md:hidden z-50">
               <div class="offcanvas-menu" id="offcanvasMenu">
                 <span class="close-icon" onclick="toggleMenu()">&times;</span>
-                <a href="#" class="menu-link">Home</a>
-                <a href="#" class="menu-link">About</a>
-                <a href="#" class="menu-link">Services</a>
-                <a href="#" class="menu-link">Contact</a>
+                <img class="mx-auto" src="../assets/Logo-mobile.png" alt="" srcset="" />
+                <div>
+                <div>
+                  <div class="accordion flex items-center justify-between border-0 mt-12">
+                    <a href="" class="menu-link my-12">BOOK TICKETS</a>
+                    <i class="fas fa-chevron-right text-white"></i>
+                  </div>
+                  <div class="panel">
+                    
+                  </div>
+                </div>
+                  <div>
+                    <div class="accordion flex items-center justify-between border-0">
+                      <a href="#" class="menu-link">MANAGE TICKETS</a>
+                      <i class="fas fa-chevron-right text-white"></i>
+                    </div>
+                    <div class="panel">
+                      <p></p>
+                    </div>
+                  </div>
+                </div>
+               
               </div>
               <div class="menu-toggle" id="menuToggle" onclick="toggleMenu()">
                 &#9776;
@@ -120,7 +139,7 @@
       </div>
     </div>
     <!-- *******************Booking_details********** -->
-    <section class="booking_details_section">
+    <section class="booking_details_section ">
       <div class="booking_content_area">
         <div class="booking_left ">
           <div class="booking_form p-8 bg-white">
@@ -139,7 +158,7 @@
                     <input
                       type="text"
                       placeholder="DTW (Detroit Airport)"
-                      class="focus:outline-none border border-[#F8A930] rounded-lg md:w-3/4 w-4/5 p-1.5 placeholder:text-[#09355E]"
+                      class="focus:outline-none border border-[#F8A930] rounded-lg md:w-3/4 sm:w-4/5 w-3/4 p-1.5 placeholder:text-[#09355E]"
                     />
                   </div>
                 </div>
@@ -157,7 +176,7 @@
                     <input
                       type="text"
                       placeholder="Downtown Detroit"
-                      class="focus:outline-none border border-[#F8A930] rounded-lg md:w-3/4 w-4/5 p-1.5 placeholder:text-[#09355E] "
+                      class="focus:outline-none border border-[#F8A930] rounded-lg md:w-3/4 sm:w-4/5 w-3/4 p-1.5 placeholder:text-[#09355E] "
                     />
                   </div>
                 </div>
@@ -219,9 +238,9 @@
           </div>
         <!-- ***************Search_result_section********** -->
     <section contenteditable="search_result_section " >
-        <div class=" xl:pl-10 lg:pl-1  lg:pr-2 py-8 pr-8 pl-8  ">
+        <div class=" xl:pl-10 lg:pl-4  lg:pr-2 py-8 sm:pr-8 sm:pl-8  pr-3 pl-3">
             <div class="search_area ">
-                <div class="flex items-center justify-between mb-2 pr-6">
+                <div class="flex items-center justify-between mb-2 pr-6 flex-wrap">
                     <h5 class="font-semibold">Search Results (12)</h5>
                     <div class="flex items-center">
                         <i class="fas fa-arrow-left text-[#b4b4b4] text-xl"></i> <p class="text-[#626262]  mx-3">Tue, 02/06</p><i class="fas fa-arrow-right text-[#000000]"></i>
@@ -331,21 +350,21 @@
                   </div>
               </div>
               <!-- ------------------mobile-card -->
-              <div class="search_card mt-6 md:hidden block px-5">
-                <p class="text-center">1hr</p>
+              <div class="search_card mt-6 md:hidden block px-5 ">
+                <p class="text-center text-[12px]">1hr</p>
                 <div class="flex items-center justify-between">
-                  <p class="text-[#1F609F]">06:00 AM</p>
-                  <img src="../assets/Line 25.png" alt="" srcset="">
-                  <p class="text-[#1F609F]">07:00 AM</p>
+                  <p class="text-[#1F609F] [12px]">06:00 AM</p>
+                  <img src="../assets/Line 25.png" alt="" srcset="" class="w-[119px]">
+                  <p class="text-[#1F609F] [12px]">07:00 AM</p>
                 </div>
                 <div  class="flex items-center justify-between gap-3 mt-2">
-                  <p class="text-sm text-[#626262]">DAX Rosa Park Terminal</p>
-                  <p class="bg-[#000000] text-white h-8 w-8 flex items-center justify-center rounded-lg ">102</p>
-                  <p class="text-sm text-[#626262]" >DWT (McNamara/North Terminal)</p>
+                  <p class="sm:text-[14px] text-[10px] text-[#626262]">DAX Rosa Park Terminal</p>
+                  <p class="bg-[#000000] text-white sm:h-8 sm:w-8 h-[15px] w-[22px] flex items-center justify-center rounded-lg text-[7px] sm:text-[10px]">102</p>
+                  <p class="sm:text-[14px] text-[10px] text-[#626262]" >DWT (McNamara/North Terminal)</p>
                 </div>
                 <div class="flex items-center my-4">
                   <img src="../assets/bus depart.png" alt="" srcset="">
-                  <p class="ml-2">DTW (Detroit Airport) - Downtown Detroit</p>
+                  <p class="ml-2 sm:text-[14px] text-[12px]">DTW (Detroit Airport) - Downtown Detroit</p>
                 </div>
                 <div class="flex items-center justify-between">
                   <div class="flex items-center">
@@ -355,21 +374,21 @@
                   <img src="../assets//bookig-filter-Vector.png" alt="" srcset="">
                 </div>
               </div>
-              <div class="search_card mt-6 md:hidden block px-5">
-                <p class="text-center">1hr</p>
+              <div class="search_card mt-6 md:hidden block px-5 ">
+                <p class="text-center text-[12px]">1hr</p>
                 <div class="flex items-center justify-between">
-                  <p class="text-[#1F609F]">06:00 AM</p>
-                  <img src="../assets/Line 25.png" alt="" srcset="">
-                  <p class="text-[#1F609F]">07:00 AM</p>
+                  <p class="text-[#1F609F] [12px]">06:00 AM</p>
+                  <img src="../assets/Line 25.png" alt="" srcset="" class="w-[119px]">
+                  <p class="text-[#1F609F] [12px]">07:00 AM</p>
                 </div>
                 <div  class="flex items-center justify-between gap-3 mt-2">
-                  <p class="text-sm text-[#626262]">DAX Rosa Park Terminal</p>
-                  <p class="bg-[#000000] text-white h-8 w-8 flex items-center justify-center rounded-lg ">102</p>
-                  <p class="text-sm text-[#626262]" >DWT (McNamara/North Terminal)</p>
+                  <p class="sm:text-[14px] text-[10px] text-[#626262]">DAX Rosa Park Terminal</p>
+                  <p class="bg-[#000000] text-white sm:h-8 sm:w-8 h-[15px] w-[22px] flex items-center justify-center rounded-lg text-[7px] sm:text-[10px]">102</p>
+                  <p class="sm:text-[14px] text-[10px] text-[#626262]" >DWT (McNamara/North Terminal)</p>
                 </div>
                 <div class="flex items-center my-4">
                   <img src="../assets/bus depart.png" alt="" srcset="">
-                  <p class="ml-2">DTW (Detroit Airport) - Downtown Detroit</p>
+                  <p class="ml-2 sm:text-[14px] text-[12px]">DTW (Detroit Airport) - Downtown Detroit</p>
                 </div>
                 <div class="flex items-center justify-between">
                   <div class="flex items-center">
@@ -379,21 +398,21 @@
                   <img src="../assets//bookig-filter-Vector.png" alt="" srcset="">
                 </div>
               </div>
-              <div class="search_card mt-6 md:hidden block px-5">
-                <p class="text-center">1hr</p>
+              <div class="search_card mt-6 md:hidden block px-5 ">
+                <p class="text-center text-[12px]">1hr</p>
                 <div class="flex items-center justify-between">
-                  <p class="text-[#1F609F]">06:00 AM</p>
-                  <img src="../assets/Line 25.png" alt="" srcset="">
-                  <p class="text-[#1F609F]">07:00 AM</p>
+                  <p class="text-[#1F609F] [12px]">06:00 AM</p>
+                  <img src="../assets/Line 25.png" alt="" srcset="" class="w-[119px]">
+                  <p class="text-[#1F609F] [12px]">07:00 AM</p>
                 </div>
                 <div  class="flex items-center justify-between gap-3 mt-2">
-                  <p class="text-sm text-[#626262]">DAX Rosa Park Terminal</p>
-                  <p class="bg-[#000000] text-white h-8 w-8 flex items-center justify-center rounded-lg ">102</p>
-                  <p class="text-sm text-[#626262]" >DWT (McNamara/North Terminal)</p>
+                  <p class="sm:text-[14px] text-[10px] text-[#626262]">DAX Rosa Park Terminal</p>
+                  <p class="bg-[#000000] text-white sm:h-8 sm:w-8 h-[15px] w-[22px] flex items-center justify-center rounded-lg text-[7px] sm:text-[10px]">102</p>
+                  <p class="sm:text-[14px] text-[10px] text-[#626262]" >DWT (McNamara/North Terminal)</p>
                 </div>
                 <div class="flex items-center my-4">
                   <img src="../assets/bus depart.png" alt="" srcset="">
-                  <p class="ml-2">DTW (Detroit Airport) - Downtown Detroit</p>
+                  <p class="ml-2 sm:text-[14px] text-[12px]">DTW (Detroit Airport) - Downtown Detroit</p>
                 </div>
                 <div class="flex items-center justify-between">
                   <div class="flex items-center">
